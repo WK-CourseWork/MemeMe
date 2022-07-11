@@ -1,3 +1,3 @@
 # MemeMe
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/79363bd6c2fc4bc69819421437501f62)](https://app.codacy.com/gh/WK-CourseWork/MemeMe?utm_source=github.com&utm_medium=referral&utm_content=WK-CourseWork/MemeMe&utm_campaign=Badge_Grade_Settings)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1ffa617525a345f3b383426f5201ec15)](https://www.codacy.com/gh/WK-CourseWork/MemeMe/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WK-CourseWork/MemeMe&amp;utm_campaign=Badge_Grade)
