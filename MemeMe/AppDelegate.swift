@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MemeMe
+//  MemeMe1.0
 //
-//  Created by Justin Kumpe on 7/11/22.
+//  Created by Waylon Kumpe on 7/11/22.
 //
 
 import UIKit
