@@ -1,16 +1,21 @@
 //
-//  ViewController.swift
+//  MemeDetailViewController.swift
 //  MemeMe1.0
 //
 //  Created by Waylon Kumpe on 7/11/22.
 //
 
+// MARK: - Import
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
-// MARK: - ImageView.
-    @IBOutlet weak var imageView: UIImageView!
+// MARK: - Class
+class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+
+    // MARK: - Properties
     var memedImage: UIImage!
+    
+    // MARK: - ImageView.
+    @IBOutlet weak var imageView: UIImageView!
 
     // MARK: TextFields.
     @IBOutlet weak var topTextField: UITextField!
@@ -55,17 +60,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         shareButton.isEnabled = false
     }
 
+    // MARK: - Life Cycle
+    
     // MARK: View Will Appear.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     // MARK: View Will Dissappear.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     // MARK: - Image Picker Controller.
@@ -143,19 +152,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    // MARK: - Save the meme.
+    // MARK: - Create and Save the meme.
     func save() {
-        // Create the meme.
+        // Update the meme.
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage!)
-        print(meme)
-    }
-
-    // MARK: Meme.
-    struct Meme {
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memedImage: UIImage
+       
+        // Add it to the memes array on the Application Delegate
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
 
     // MARK: - Generate the memed image.
@@ -186,8 +189,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         controller.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) -> () in
                     if completed {
                         self.save()
-                        self.dismiss(animated: true, completion: nil)
-                        
+                        self.dismiss(animated: true)
                     }
         }
 
