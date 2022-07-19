@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="OAK-9B-iFk">
             <objects>
-                <tabBarController id="Q5a-Xd-qDl" sceneMemberID="viewController">
+                <tabBarController interfaceStyle="dark" id="Q5a-Xd-qDl" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cVB-3x-Otb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -47,7 +47,7 @@
         <!--Table-->
         <scene sceneID="i7h-Jq-YjN">
             <objects>
-                <navigationController title="Table" id="K87-i4-lzo" sceneMemberID="viewController">
+                <navigationController title="Table" interfaceStyle="dark" id="K87-i4-lzo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" image="list.dash" catalog="system" id="dN3-y7-hWm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3fg-f7-vt4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -59,16 +59,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLc-CK-65x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2241" y="54"/>
+            <point key="canvasLocation" x="2241" y="100"/>
         </scene>
         <!--SentMemesCollectionViewController-->
         <scene sceneID="z1y-nA-9Jd">
             <objects>
-                <collectionViewController title="SentMemesCollectionViewController" id="xNs-UN-nvV" customClass="SentMemesCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="SentMemesCollectionViewController" interfaceStyle="dark" id="xNs-UN-nvV" customClass="SentMemesCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" dataMode="prototypes" id="Jrw-zV-GQW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94081258519026223" green="1" blue="0.83528518322804379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="br2-to-d2u">
                             <size key="itemSize" width="130" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -128,7 +128,7 @@
         <!--SentMemesTableViewController-->
         <scene sceneID="Rax-Gt-a87">
             <objects>
-                <tableViewController title="MemeTableViewController" id="fhb-I6-e4P" userLabel="SentMemesTableViewController" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="MemeTableViewController" interfaceStyle="dark" id="fhb-I6-e4P" userLabel="SentMemesTableViewController" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2mV-gZ-3Ag">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,7 +190,7 @@
         <!--MemeDetailViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailViewController" title="MemeDetailViewController" id="BYZ-38-t0r" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" title="MemeDetailViewController" interfaceStyle="dark" id="BYZ-38-t0r" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8IQ-Pw-wYe"/>
+        <segue reference="Oxy-D6-ljo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
