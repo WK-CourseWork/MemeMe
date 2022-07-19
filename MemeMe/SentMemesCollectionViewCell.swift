@@ -12,6 +12,5 @@ import UIKit
 class SentMemesCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets
-    @IBOutlet weak var ImageView: UIImageView!
-    
+    @IBOutlet weak var collectionImageView: UIImageView!
 }

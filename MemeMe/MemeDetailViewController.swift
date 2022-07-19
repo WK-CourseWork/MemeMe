@@ -156,7 +156,6 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
     func save() {
         // Update the meme.
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage!)
-       
         // Add it to the memes array on the Application Delegate
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
@@ -181,15 +180,20 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
 
         return memedImage
     }
+    
+    /*override func validate(_ command: UICommand) {
+        super.validate(command)
+    }*/
 
     // MARK: Share the meme.
     @IBAction func share(_ sender: Any) {
         let image = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        controller.isModalInPresentation = true
         controller.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) -> () in
                     if completed {
                         self.save()
-                        self.dismiss(animated: true)
+                        self.dismiss(animated: true, completion: nil)
                     }
         }
 
