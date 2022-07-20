@@ -20,8 +20,7 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    
-    
+
     // MARK: Take or choose a photo
     // Take a new photo with the camera.
     @IBAction func cameraButtonAction(_ sender: Any) {
