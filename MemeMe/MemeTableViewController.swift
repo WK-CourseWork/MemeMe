@@ -8,7 +8,7 @@
 import UIKit
 
 class MemeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
     // MARK: Properties
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var tableAddButton: UIBarButtonItem!

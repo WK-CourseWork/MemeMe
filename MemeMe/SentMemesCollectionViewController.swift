@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class SentMemesCollectionViewController: UICollectionViewController {
-    
+
     // MARK: Properties
     @IBOutlet weak var collcetionAddButton: UIBarButtonItem!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!

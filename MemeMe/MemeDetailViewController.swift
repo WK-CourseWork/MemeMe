@@ -163,7 +163,7 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
         let image = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         controller.isModalInPresentation = true
-        controller.completionWithItemsHandler = { (_, completed, returnedItems, activityError) -> Void in
+        controller.completionWithItemsHandler = { (_, completed, _, activityError) -> Void in
                     if completed {
                         self.save()
                         self.dismiss(animated: true, completion: nil)
