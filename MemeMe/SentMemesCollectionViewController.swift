@@ -5,24 +5,21 @@
 //  Created by Waylon Kumpe on 7/14/22.
 //
 
-// MARK: - Import
 import Foundation
 import UIKit
 
-// MARK: - Class
-
 class SentMemesCollectionViewController: UICollectionViewController {
     
-    // MARK: - Properties
+    // MARK: Properties
     @IBOutlet weak var collcetionAddButton: UIBarButtonItem!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    // MARK: - Life Cycle
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let space:CGFloat = 3.0
+        let space: CGFloat = 3.0
         let dimensionWidth = (view.frame.size.width - (2 * space)) / 3.0
         let dimensionHeight = (view.frame.size.height - (1 * space)) / 3.0
         
@@ -37,7 +34,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-    // MARK: - Collection View Data Source
+    // MARK: Collection View Data Source
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let memes = (UIApplication.shared.delegate as! AppDelegate).memes

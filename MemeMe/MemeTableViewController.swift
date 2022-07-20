@@ -5,16 +5,15 @@
 //  Created by Waylon Kumpe on 7/14/22.
 //
 
-// MARK: - Import
 import UIKit
 
-// MARK: - Class
 class MemeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - Properties
+    // MARK: Properties
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var tableAddButton: UIBarButtonItem!
 
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
@@ -27,7 +26,6 @@ class MemeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.reloadData()
     }
     
-    // MARK: - Life Cycle
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let memes = (UIApplication.shared.delegate as! AppDelegate).memes
         return memes.count
