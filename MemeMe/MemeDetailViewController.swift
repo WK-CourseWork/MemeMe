@@ -19,7 +19,9 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    
     // MARK: Take or choose a photo
     // Take a new photo with the camera.
     @IBAction func cameraButtonAction(_ sender: Any) {
@@ -75,6 +77,9 @@ class MemeDetailViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     // For when you hit the cancel button.
+    @IBAction func cancel(_: MemeDetailViewController) {
+        dismiss(animated: true, completion: nil)
+    }
     func imagePickerControllerDidCancel(_: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
